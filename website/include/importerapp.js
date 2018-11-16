@@ -437,6 +437,8 @@ ImporterApp.prototype.ProcessFiles = function (fileList, isUrl)
 		},
 		onReady : function (fileNames, jsonData) {
 			myThis.fileNames = fileNames;
+			// RGB Values, but values divided by 255
+			jsonData.materials[0].diffuse = [1,1,1];
 			myThis.viewer.SetJsonData (jsonData);
 
 			var menu = document.getElementById ('menu');
